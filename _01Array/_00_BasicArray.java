@@ -10,7 +10,7 @@ public class _00_BasicArray {
 	 *                단, 속도는 빠름
 	 * 공부할때 : 배열의 길이, 배열의 인덱스 기억하자!
 	 */
-	//배열 선언문
+	//배열 선언문  
 		int[] lotto = new int[3]; //길이 3, 인덱스 0-2, value type:int
 		System.out.println(lotto[0]+"/"+lotto[1]+"/"+lotto[2]);
 		lotto[1]=30;
@@ -22,8 +22,7 @@ public class _00_BasicArray {
 		System.out.println(lotto[0]+20);
 		System.out.println(lotto[0]+"/"+lotto[1]+"/"+lotto[2]);
 		lotto[3]=lotto[1]+20; //3번 인덱스가 없음. 
-	 
-	 
+		                      // 예외발생 ArrayIndexOutOfBoundsException	 
    
 	}
 }
