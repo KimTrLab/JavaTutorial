@@ -7,7 +7,8 @@
   <img src="https://img.shields.io/badge/Java-blue?style=flat&logo=JAVA&logoColor=white"/>
 </div>
 
-
+<div align=center>
 ## 📝 일정표
 - Day01 : _00_변수
 - Day02 : _01_array 1차원배열특징과 연습문제
+</div>
