@@ -12,6 +12,7 @@ public class _00_BasicArray {
 	 */
 	//배열 선언문  
 		int[] lotto = new int[3]; //길이 3, 인덱스 0-2, value type:int
+		//배열 값 수정 및 조회
 		System.out.println(lotto[0]+"/"+lotto[1]+"/"+lotto[2]);
 		lotto[1]=30;
 		lotto[0]=20;
