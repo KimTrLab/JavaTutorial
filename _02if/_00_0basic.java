@@ -1,5 +1,5 @@
 package _02if;
-public class _00_basic {
+public class _00_0basic {
 	public static void main(String[] args) {
 		// 조건식으로 참과 거짓을 구분하여 코드를 분리하는 if
 		// 조건 타입
