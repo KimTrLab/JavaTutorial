@@ -1,6 +1,6 @@
 package _02if;
 
-public class _00__Before {
+public class _00_0Before {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
