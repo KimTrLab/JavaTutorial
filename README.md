@@ -1,3 +1,6 @@
+<div align=left>
+	- 김은수님의 자바 공부하기
+</div>
 <div align=center>
   <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=Kimtr_Tutorial_JAVA&fontSize=70" />
 	<h3>📚 Tech Stack 📚</h3>
