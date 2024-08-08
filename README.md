@@ -6,8 +6,8 @@
 <div align="center">
   <img src="https://img.shields.io/badge/Java-blue?style=flat&logo=JAVA&logoColor=white"/> version 1.8
 </div>
-
-## 📝 일정표  2024년 8월 휴먼교육센터(수원)
+## 2024년 8월 휴먼교육센터(수원)
+## 📝 일정표  
 - Day01 : _00_변수
 - Day02 : _01_array 1차원배열특징과 연습문제
 - Day03
