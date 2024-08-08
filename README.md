@@ -4,7 +4,7 @@
 	<p>✨ Languages ✨</p>
 </div>
 <div align="center">
-  <img src="https://img.shields.io/badge/Java-blue?style=flat&logo=JAVA&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Java-blue?style=flat&logo=JAVA&logoColor=white"/> version 1.8
 </div>
 
 ## 📝 일정표
