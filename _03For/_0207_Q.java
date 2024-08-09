@@ -22,7 +22,6 @@ public class _0207_Q {
 		 */
 		int sum=0;
 		for(int i=1; i<= 10; i++) {
-			sum+=i;
 			if(i==10) {
 				System.out.print(i+"=");				
 			}else {
