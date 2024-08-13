@@ -27,6 +27,20 @@ int[] letter={8,12,4,13,2,14,4,5}
 		 * 
 		 * 
 		 */
+		int[] letter={8,12,4,13,2,14,4,5};
+		//가 코드
+		for(int i=0; i < letter.length; i++) {
+			
+		}
+		
+		//나 코드
+		for(int i=0; i < letter.length; i++) {
+			// 어떤 수는 i
+			if(i%2==0) {
+				System.out.println(i);
+			}
+		}
+		
 	}
 
 }

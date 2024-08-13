@@ -31,6 +31,20 @@ int[] letter={8,12,4,13,2,14,4,5}
 		 *    
 		 * 
 		 */
+		int[] letter={8,12,4,13,2,14,4,5};
+		//가 코드
+		for(int i=0; i < letter.length; i++) {
+			
+		}
+		
+		// 나 코드
+		int max=0;
+		for(int i=0; i < letter.length; i++) {
+			if(max < letter[i]) {
+				max=letter[i];
+			}
+		}
+		System.out.println(max);
 	}
 
 }

@@ -42,6 +42,22 @@ int[] letter={8,12,4,13,25,14,4,5}
 		 * 
 		 * 
 		 */
+		int[] letter={8,12,24,13,2,14,4,5};
+		//step1 코드
+		for(int i=0; i < letter.length; i++) {
+			
+		}
+		
+		// step2 코드
+		int max=0;
+		for(int i=0; i < letter.length; i++) {
+			if(letter[i]%2==0) {
+				if(max < letter[i]) {
+					max=letter[i];
+				}
+			}
+		}
+		System.out.println(max);
 	}
 
 }

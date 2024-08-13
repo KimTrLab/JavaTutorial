@@ -35,6 +35,17 @@ int[] a = new int[10];
 		 * 
 		 * 
 		 */
+		String a = "6/4/3/2/5/1/4/5/6/7/8/9/1/2/3/4/5/6";
+		int[] aa = new int[10]; 
+		for(int i=0; i< a.length(); i++) {
+			char temp = a.charAt(i);
+			if(temp != '/') {
+				aa[temp-48]++;
+			}
+		}
+		for(int i=0; i< aa.length; i++) {
+			System.out.println(i+"숫자 : "+aa[i]);
+		}
 
 	}
 
