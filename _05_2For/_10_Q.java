@@ -30,7 +30,7 @@ size가 2일경우에 7개이다.
 			}
 			if(cnt >= 3) {
 				System.out.println(i+"위치의 0은 오른쪽으로 "+cnt+"개 연속입니다");
-				totalCnt += (cnt%3+1);
+				totalCnt += (cnt-size+1);
 				i += 3-1;
 			}
 		}
