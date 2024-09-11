@@ -74,9 +74,7 @@ public class _09_Q {
 			// 행에서 제거 된 만큼 위에 숫자를 한 칸씩 다운하기
 			for(int i = numberLeftCol; i <= numberRightCol; i++) {
 				for(int j = row-1; j >= 0; j--) {
-					//if(pang[j][i] >= 0) {
-						pang[j+1][i]=pang[j][i];						
-					//}
+					pang[j+1][i]=pang[j][i];						
 					if(j==0){
 						pang[j][i]=9;  //빈칸은 9로 저장
 					}
