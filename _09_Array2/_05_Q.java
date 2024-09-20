@@ -2,14 +2,15 @@ package _09_Array2;
 import java.util.Arrays;
 public class _05_Q {
 	public static void main(String[] args) {
-		int[][] a = new int[4][5];
+		int[][] a = new int[5][5];
 		int num=1;		
 
 		//변수4개 만들기
 		int 행최소값=0;
-		int 행최대값=3;
+		int 행최대값=4;
 		int 열최소값=0;
-		int 열최대값=4;		
+		int 열최대값=4;	
+		int cnt=0;
 		
 		for(int j=0; j<2; j++) {
 			// 맨 위에 부분 숫자 채우기
@@ -17,20 +18,24 @@ public class _05_Q {
 			// 맨 위(두번째는 행최소값 1  열최소값 1열최대값 3)
 			for(int i=열최소값; i <= 열최대값; i++) {
 				a[행최소값][i]=num++;
+				cnt++;
 			}
 			//위 반복문이 완료되었다면 0번행은 채울 필요없다.
 			//행의 최소값을 증가시켜 버리다.
 			행최소값++;
 			for(int i=행최소값; i <= 행최대값; i++) {
 				a[i][열최대값]=num++;
+				cnt++;
 			}
 			열최대값--;
 			for(int i=열최대값; i>=열최소값; i--) {
 				a[행최대값][i]=num++;
+				cnt++;
 			}
 			행최대값--;  // 행  1 2  열은 0  3
 			for(int i=행최대값; i>=행최소값; i--) {
 				a[i][열최소값]=num++;
+				cnt++;
 			}
 			열최소값++;  //행  1 2  열은 1  3
 		}
@@ -43,6 +48,7 @@ public class _05_Q {
 			}	
 			System.out.println();
 		}
+		System.out.println(cnt);
 		
 		
 		
