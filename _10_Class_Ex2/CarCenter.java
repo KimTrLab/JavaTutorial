@@ -6,6 +6,9 @@ public class CarCenter {
 	CarOne[] carList = new CarOne[7];
 	Scanner in = new Scanner(System.in);
 	CarCenter(){
+		//mainStart();
+	}
+	public void mainStart() {
 		int selNum=0;
 		while(true) {
 			menu();
@@ -74,17 +77,28 @@ public class CarCenter {
 				if(carList[i].carNumber.equals(modNumber)) {
 					System.out.println("소유자의 이름을 입력");
 					String newUser = in.nextLine();
-					//입력된 값의 유효성을 체크 하는 등 무결성 코드 추가가능
+					//입력된 값의 유효성을 체크 하는 등 
+					//무결성 코드 추가가능
 					carList[i].carUser=newUser;
 					break;
 				}
 			}
 		}
-		
-		
 	}
 	public void carDel() {
-		
+		// 시나리오 정의 
+		// 번호로 삭제할 자동차 객체를 찾는다. 그리고 삭제
+		System.out.println("삭제할 자동차 번호 입력");
+		String modNumber = in.nextLine();
+		//객체 찾기   >> 배열순회 필요
+		for(int i=0;i < carList.length; i++) {
+			if(carList[i]!=null) {
+				if(carList[i].carNumber.equals(modNumber)) {
+					carList[i]=null;
+					break;
+				}
+			}		
+		}	
 		
 	}
 }
