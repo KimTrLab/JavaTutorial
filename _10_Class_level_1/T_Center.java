@@ -53,8 +53,8 @@ public class T_Center {
 			
 			String mnum = tlist[i].getTnum();
 			if(mnum.equals(modNum)) {
-			}
-			if(tlist[i].tNum.equals(modNum)) {
+			//}
+			//if(tlist[i].tNum.equals(modNum)) {
 				// 기차번호가 유니크 하다는 것은 뒤에 있는
 				// 기차 번호랑 중복이 될 수 없다
 				// 그래서 바로 수정이 가능하다.
