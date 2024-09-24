@@ -7,7 +7,7 @@ public class EventAdmin {
 	EventOne[] elist = new EventOne[5];
 	
 	EventAdmin() {
-		menu();
+		//menu();
 	}
 	public void menu() {
 		Scanner in = new Scanner(System.in);
@@ -29,7 +29,7 @@ public class EventAdmin {
 	private void allListEvent() {
 		// TODO Auto-generated method stub
 		for(int i=0; i < elist.length; i++) {
-			if(elist[i]==null) {
+			if(elist[i]!=null) {
 				elist[i].prt();
 			}
 		}

@@ -11,7 +11,7 @@ public class MemberAdmin {
 	MemberOne[] mlist = new MemberOne[5];
 	
 	MemberAdmin() {
-		menu();
+		//menu();
 	}
 	public void menu() {
 		Scanner in = new Scanner(System.in);
