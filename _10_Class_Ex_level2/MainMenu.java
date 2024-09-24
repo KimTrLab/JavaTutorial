@@ -13,17 +13,17 @@ public class MainMenu {
 	//의족관계 설정 끝
 	
 	MainMenu(){
-		// 초기화 작업할 때 많이 사용
-		// 초기화 작업은 멤버변수의 값을 셋팅하는 느낌
-		// 예) 데이터베이스에서 값을 가져와서 초기값 결정
-		// 메뉴는 초기화 작업이라고 보기 어렵다
-		// 별도로 메서드 처리 하겠다.
 		if(eventAdm == null) {
 			eventAdm = new EventAdmin();
 		}
 		if(memberAdm == null) {
 			memberAdm = new MemberAdmin();
 		}
+		// 초기화 작업할 때 많이 사용
+		// 초기화 작업은 멤버변수의 값을 셋팅하는 느낌
+		// 예) 데이터베이스에서 값을 가져와서 초기값 결정
+		// 메뉴는 초기화 작업이라고 보기 어렵다
+		// 별도로 메서드 처리 하겠다.
 		menu();
 	}
 	
