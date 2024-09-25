@@ -17,6 +17,7 @@ public class MyDogList {
 		d[3]=new Dog();
 		System.out.println(d[3]);
 		Dog dd = new Dog();
+		
 		d[4]=dd;
 		System.out.println(dd);
 		System.out.println(d[4]);
