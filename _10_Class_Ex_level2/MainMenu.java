@@ -4,14 +4,13 @@ import java.util.Scanner;
 
 public class MainMenu {
 	//의존관계 설정 시작
-	EventAdmin eventAdm= null;
-	MemberAdmin memberAdm=null;
+	EventAdmin eventAdm = null;
+	MemberAdmin memberAdm = null;
 	    //의존관계 변수만 설정하고 주소를
 	    // 저장하는 방법은 직접 객체를 만들거나
 	    // 주소를 주입 받는 방식이 있으니 
 	    // 이 부분을 생각해서 공부 하자
-	//의족관계 설정 끝
-	
+	//의족관계 설정 끝	
 	MainMenu(){
 		if(eventAdm == null) {
 			eventAdm = new EventAdmin();
@@ -44,8 +43,7 @@ public class MainMenu {
 			}else if(num ==3) {
 				break; // while문 종료
 			}
-		}
-		
+		}	
 		
 	}
 	
