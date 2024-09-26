@@ -17,6 +17,7 @@ public class MainMenu {
 		}
 		if(memberAdm == null) {
 			memberAdm = new MemberAdmin();
+			memberAdm.setEvent(eventAdm);
 		}
 		// 초기화 작업할 때 많이 사용
 		// 초기화 작업은 멤버변수의 값을 셋팅하는 느낌

@@ -11,6 +11,7 @@ public class MemberAdmin {
 	// 저장한 배열의 주소를 저장하고 있다. 
 	//MemberOne[] mlist = new MemberOne[5];
 	ArrayList<MemberOne> mlist = new ArrayList<>();
+	EventAdmin eventAdmin = null;
 	MemberAdmin() {
 		//menu();
 	}
@@ -19,6 +20,7 @@ public class MemberAdmin {
 		while(true) {
 			System.out.println("1.고객등록");
 			System.out.println("2.전체보기");
+			System.out.println("3.이벤트보기");
 			System.out.println("9.이전메뉴");
 			int num = in.nextInt();
 			in.nextLine();
@@ -26,6 +28,8 @@ public class MemberAdmin {
 				addUser();
 			}else if(num==2) {
 				allListUser();
+			}else if(num==3) {
+				eventAdmin.allListEvent();
 			}else if(num ==9) {
 				break; // while문 종료
 			}
@@ -82,6 +86,11 @@ public class MemberAdmin {
 //				mlist[i].prt();
 //			}
 //		}
+		
+	}
+	public void setEvent(EventAdmin eventAdm) {
+		// TODO Auto-generated method stub
+		eventAdmin=eventAdm;
 		
 	}
 

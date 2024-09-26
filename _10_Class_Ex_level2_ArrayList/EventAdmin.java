@@ -1,11 +1,12 @@
 package _10_Class_Ex_level2_ArrayList;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 //이벤트 관리 클래스
 public class EventAdmin {
-	EventOne[] elist = new EventOne[5];
-	
+	//EventOne[] elist = new EventOne[5];
+	ArrayList<EventOne> elist = new ArrayList<>();
 	EventAdmin() {
 		//menu();
 	}
@@ -26,12 +27,15 @@ public class EventAdmin {
 			}
 		}
 	}
-	private void allListEvent() {
+	public void allListEvent() {
 		// TODO Auto-generated method stub
-		for(int i=0; i < elist.length; i++) {
-			if(elist[i]!=null) {
-				elist[i].prt();
-			}
+//		for(int i=0; i < elist.length; i++) {
+//			if(elist[i]!=null) {
+//				elist[i].prt();
+//			}
+//		}
+		for(int i=0; i< elist.size(); i++) {
+			elist.get(i).prt();
 		}
 		
 	}
@@ -45,12 +49,13 @@ public class EventAdmin {
 		System.out.println("내용을 입력하세요");
 		String memo = in.nextLine();
 		temp.memo=memo;		
-		for(int i=0; i < elist.length; i++) {
-			if(elist[i]==null) {
-				elist[i]=temp;
-				break;
-			}
-		}
+//		for(int i=0; i < elist.length; i++) {
+//			if(elist[i]==null) {
+//				elist[i]=temp;
+//				break;
+//			}
+//		}
+		elist.add(temp);
 		temp=null;
 		
 	}
