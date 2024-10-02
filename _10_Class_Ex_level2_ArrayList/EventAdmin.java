@@ -6,7 +6,7 @@ import java.util.Scanner;
 //이벤트 관리 클래스
 public class EventAdmin {
 	//EventOne[] elist = new EventOne[5];
-	ArrayList<EventOne> elist = new ArrayList<>();
+	private ArrayList<EventOne> elist = new ArrayList<>();
 	EventAdmin() {
 		//menu();
 	}
@@ -45,10 +45,12 @@ public class EventAdmin {
 		EventOne temp = new EventOne();
 		System.out.println("제목을 입력하세요");
 		String title = in.nextLine();
-		temp.title=title;
+		temp.setTitle(title);
+		//temp.title=title;
 		System.out.println("내용을 입력하세요");
 		String memo = in.nextLine();
-		temp.memo=memo;		
+		temp.setMemo(memo);
+		//temp.memo=memo;		
 //		for(int i=0; i < elist.length; i++) {
 //			if(elist[i]==null) {
 //				elist[i]=temp;

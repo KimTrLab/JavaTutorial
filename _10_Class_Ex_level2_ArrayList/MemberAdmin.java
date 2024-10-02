@@ -10,8 +10,9 @@ public class MemberAdmin {
 	// 배열도 객체입니다.. mlist는 참조변수이고 MemberOne객체의 주소를
 	// 저장한 배열의 주소를 저장하고 있다. 
 	//MemberOne[] mlist = new MemberOne[5];
-	ArrayList<MemberOne> mlist = new ArrayList<>();
-	EventAdmin eventAdmin = null;
+	private final int MAXMEBERCOUNT = 10;
+	private ArrayList<MemberOne> mlist = new ArrayList<>();
+	private EventAdmin eventAdmin = null;
 	MemberAdmin() {
 		//menu();
 	}
@@ -35,9 +36,9 @@ public class MemberAdmin {
 			}
 		}
 	}
-	public int duplexIDcheck(String id) {
+	private int duplexIDcheck(String id) {
 		for(int i=0; i < mlist.size(); i++) {
-			if(mlist.get(i).id.equals(id)) {
+			if(mlist.get(i).getId().equals(id)) {
 				return 1;
 			}
 		}
@@ -53,28 +54,34 @@ public class MemberAdmin {
 		return 0;
 	}
 	private void addUser() {
-		Scanner in = new Scanner(System.in);
-		MemberOne temp = new MemberOne();
-		System.out.println("아이디를 입력하세요");
-		String id = in.nextLine();
-		if(duplexIDcheck(id)==1) {
-			System.out.println("입력한 아이디는 중복됨");
+		if(mlist.size()==MAXMEBERCOUNT) {
+			System.out.println("빈공간이 없어요");
 		}else {
-			temp.id=id;
-			System.out.println("이름을 입력하세요");
-			String name = in.nextLine();
-			temp.name=name;
-			
+			Scanner in = new Scanner(System.in);
+			MemberOne temp = new MemberOne();
+			System.out.println("아이디를 입력하세요");
+			String id = in.nextLine();
+			if(duplexIDcheck(id)==1) {
+				System.out.println("입력한 아이디는 중복됨");
+			}else {
+				temp.setId(id);
+				//temp.id=id;
+				System.out.println("이름을 입력하세요");
+				String name = in.nextLine();
+				//temp.name=name;
+				temp.setName(name);
 //			for(int i=0; i < mlist.length; i++) {
 //				if(mlist[i]==null) {
 //					mlist[i]=temp;
 //					break;
 //				}
 //			}
-			mlist.add(temp);
-		}		
-		temp=null;  // temp에 저장된 주소값이 필요없어서 null처리
-		// in.close(); // Scanner 에 필요한 자원 반납
+				mlist.add(temp);
+			}		
+			temp=null;  // temp에 저장된 주소값이 필요없어서 null처리
+			// in.close(); // Scanner 에 필요한 자원 반납
+			
+		}
 	}
 	private void allListUser() {
 		// TODO Auto-generated method stub
