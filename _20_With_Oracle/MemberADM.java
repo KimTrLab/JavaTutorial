@@ -40,8 +40,9 @@ public class MemberADM {
 		m.setAge(32);
 		// DTO 객체를 만들었음.. 오라클에 저장해보자
 		// 2-1. 커넥션 자원 가져오기
+		Connection conn = null;
 		try {
-			Connection conn = DriverManager.getConnection
+			conn = DriverManager.getConnection
 					("jdbc:oracle:thin:@localhost:1521:orcl",
 							"system",    // 아이디
 							"11111111");
@@ -65,7 +66,16 @@ public class MemberADM {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}  // 비밀번호
+		}  finally {
+			if(conn != null) {
+				try {
+					conn.close();  // 자원 반납
+				} catch (Exception e2) {
+					// TODO: handle exception
+				}
+				
+			}
+		}
 		
 		
 		
