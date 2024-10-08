@@ -17,9 +17,18 @@ public class FishDAO {
 	private String url = "jdbc:oracle:thin:@localhost:1521:orcl";
 	private String driverName = "oracle.jdbc.driver.OracleDriver";
 	private Connection conn = null; // 커넥션 자원 변수
-	public FishDAO() {
+	public static FishDAO fishdao=null;  //자기 자신의 객체 주소 변수
+	private FishDAO() {
 		init();
 	}
+	public static FishDAO getInstance() {
+		if(fishdao == null) {
+			fishdao = new FishDAO();
+		}
+		return fishdao;
+	}
+	
+	
 	private boolean conn() { // 커넥션 가져오는 공통 코드를 메서드로 정의
 		try {
 			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "system", // 아이디
@@ -142,6 +151,5 @@ public class FishDAO {
 			e.printStackTrace();
 		}
 	}
-
 
 }
