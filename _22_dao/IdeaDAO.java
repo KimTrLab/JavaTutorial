@@ -97,6 +97,30 @@ public class IdeaDAO {
 			} catch (SQLException e) {e.printStackTrace();}
 		}		
 		return flist;
+	}
+	public ArrayList<IdeaDTO> select(String searchW){
+		ArrayList<IdeaDTO> flist = new ArrayList<IdeaDTO>();
+		if(conn()) {
+			try {
+				String sql="select * from ideabank where "+
+						"title like '%"+searchW+"%'";
+				System.out.println(sql);
+				PreparedStatement psmt = conn.prepareStatement(sql);
+				ResultSet rs =psmt.executeQuery();
+				//Resultset은 테이블 형식으로 가져온다고 이해합니다.
+				while(rs.next()) {  //next()메서드는 rs에서 참조하는 테이블에서
+					                // 튜플을 순차적으로 하나씩 접근하는 메서드
+					IdeaDTO iTemp = new IdeaDTO();
+					iTemp.setTitle(rs.getString("title"));
+					iTemp.setNum(rs.getInt("num"));
+					iTemp.setContent(rs.getString("content"));
+					iTemp.setWriter(rs.getString("writer"));
+					iTemp.setIndate(rs.getString("indate"));
+					flist.add(iTemp);
+				}
+			} catch (SQLException e) {e.printStackTrace();}
+		}		
+		return flist;
 	}	
 	
 	public void delete(int delId) {

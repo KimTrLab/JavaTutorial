@@ -88,8 +88,16 @@ public class IdeaService {
 			System.out.println(t.toString());
 		}
 	}
-	private void ideaSearch() {		
+	private void ideaSearch() {	
+		Scanner in = new Scanner(System.in);
+		System.out.println("검색어를 입력 하세요");
+		String sw = in.nextLine();
+		ArrayList<IdeaDTO> idealist = ideadao.select(sw);
+		for(IdeaDTO t : idealist) {
+			System.out.println(t.toString());
+		}
 	}
+	
 	private void ideaTitleList() { // 제목과 번호보기	
 		ArrayList<IdeaDTO> idealist = ideadao.selectAll();
 		for(IdeaDTO t : idealist) {
